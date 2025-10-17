@@ -32,8 +32,25 @@ const bicycles = [
 
 
 //Take the lower weight one
-let lowerWeightBicycle = Math.min(...bicycles.map(item => item.weight))
+let lowerWeight = Math.min(...bicycles.map(item => item.weight))
+console.log(lowerWeight);
+
+
+function getBicycleByWeight(array, bicycleWeight) {
+
+    for (let i = 0; i < array.length; i++) {
+        const weight = array[i].weight;
+        
+        if (weight === bicycleWeight) {
+            return array[i].name
+        }
+
+    }
+}
+let lowerWeightBicycle = getBicycleByWeight(bicycles, lowerWeight)
 console.log(lowerWeightBicycle);
 
-//Stamp the one that has the lower wight
+//Stamp the one that has the lower weight
+
+const bicycleEl = document.querySelector('h1')
 
