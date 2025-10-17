@@ -54,3 +54,4 @@ console.log(lowerWeightBicycle);
 
 const bicycleEl = document.querySelector('h1')
 
+bicycleEl.innerHTML = `${lowerWeightBicycle} is the lighter`
