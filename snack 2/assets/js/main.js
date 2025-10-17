@@ -43,5 +43,23 @@ for (let key in soccerTeams) {
     soccerTeams[key].points = Math.floor(Math.random() * 100);
     soccerTeams[key].fouls = Math.floor(Math.random() * 50);
 }
+console.log(soccerTeams);
+
 //Create a new array
+const teamsFouls = []
+
 //Push objects with names and generated fouls in the array
+
+for (let i = 0; i < soccerTeams.length; i++) {
+    const team = soccerTeams[i];
+    const teamObj = {
+        name: soccerTeams[i].name,
+        fouls: soccerTeams[i].fouls
+    }
+
+    teamsFouls.push(teamObj)
+    
+}
+
+//Stamp result in console
+console.log(teamsFouls);
